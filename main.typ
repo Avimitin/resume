@@ -32,9 +32,9 @@
     let archrv-date = [#translate-date(03, 2022) -- #translate-date(05, 2023)]
     translate(
       en: cventry(
-        tl: [*ISCAS*, Remote],
+        tl: [*Arch Linux RISC-V*, Remote],
         tr: archrv-date,
-        bl: [_Modified Arch Linux packages for RISC-V_, Package Maintainer],
+        bl: [_ISCAS_, Package Maintainer],
       )[#noSimple(
         // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
@@ -43,9 +43,9 @@
       - Proactively championed upstream submission of RISC-V platform-related modifications, fostering close communication with the community to drive widespread support for the RISC-V ecosystem.
       ]],
       zh: cventry(
-        tl: [*中科院软件研究所*，远程],
+        tl: [*Arch Linux RISC-V 小队*，远程],
         tr: archrv-date,
-        bl: [Arch Linux RISC-V 小队，操作系统开发工程师],
+        bl: [中科院软件研究所，操作系统开发工程师],
       )[
       - 积极贡献 Arch Linux RISC-V 软件包支持项目，提交 PR 189 个，努力提升 RISC-V 平台软件生态。
       - 独立负责 Arch Linux RISC-V 测试与验证，巩固并扩展其基础设施架构，搭建自动化构建测试环境，提升系统稳定性。
@@ -58,9 +58,9 @@
     let buddy-date = [#translate-date(05, 2023) -- #translate-date(05, 2024)]
     translate(
       en: cventry(
-        tl: [*ISCAS*, Remote],
+        tl: [*Buddy MLIR*, Remote],
         tr: buddy-date,
-        bl: [_MLIR-based compiler framework_, RVV Dialect and Infra maintainer],
+        bl: [_ISCAS_, RVV Dialect and Infra maintainer],
       )[#noSimple(
         // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
@@ -70,9 +70,9 @@
       - Developed and maintained the build system infrastructure, ensuring seamless integration of new tools and libraries, and reproducibility.
       ]],
       zh: cventry(
-        tl: [*中科院软件研究所*，远程],
+        tl: [*Buddy MLIR*，远程],
         tr: buddy-date,
-        bl: [基于 MLIR 的编译器组件，RVV 方言和基础设施维护工程师],
+        bl: [中科院软件研究所，RVV 方言和基础设施维护工程师],
       )[
       - 设计并创建对 RISC-V Vector 机器的底层系统基础设施，成功实现并验证在裸机上的 PyTorch 到 RVV 的端到端验证。
       - 利用 Buddy MLIR 的编译器工具链，成功在裸机 RVV 上部署并执行 Bert ML 模型，展现 Buddy MLIR 工具链的后端支持灵活性。
@@ -86,9 +86,9 @@
     let xing-date = [#translate-date(05, 2023) -- #current]
     translate(
       en: cventry(
-        tl: [*ISCAS*, Remote],
+        tl: [*Wafer Compiler*, Remote],
         tr: xing-date,
-        bl: [_MLIR-based wafer compiler framework_, Cryptography Dialect developer],
+        bl: [_ISCAS_, Cryptography Dialect developer],
       )[#noSimple(
         // simple: [- Leading a team to explore modern techniques in type theory implementation.]
       )[
@@ -96,9 +96,9 @@
       - Develop the Wafer Compiler to provide simutaneous execution of multiple crypto operation on CPU/GPU.
       ]],
       zh: cventry(
-        tl: [*中科院软件研究所*，远程],
+        tl: [*晶圆编译器*，远程],
         tr: xing-date,
-        bl: [基于 MLIR 的晶圆编译基建，密码学方言工程师],
+        bl: [_中科院软件研究所_，密码学方言工程师],
       )[
       - 设计并实现 MD5, SM3 密码学方言，为用户提供一层高抽象封装的密码学算子，简化对摘要操作的调用。
       - 用 MLIR 实现在 CPU/GPU 平台的密码学的同步执行，提高在多独立数据密码学计算时的并行度和计算效率。
@@ -182,7 +182,7 @@
 
   // Start of the document
 
-  translate(en: [= #smallcaps[Avimitin]], zh: [= 卢炯嘉])
+  translate(en: [= #smallcaps[Lu Jiongjia(Avimitin)]], zh: [= 卢炯嘉])
 
   [#link("mailto:avimitin@gmail.com")[avimitin\@gmail.com] $dot.c$ #iconlink("https://github.com/Avimitin", icon: github) $dot.c$ #iconlink("https://crates.io/users/avimitin") $dot.c$ #iconlink("https://sh1mar.in")]
 
