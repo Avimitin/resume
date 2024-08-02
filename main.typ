@@ -47,7 +47,7 @@
         tr: archrv-date,
         bl: [中科院软件研究所，操作系统开发工程师],
       )[
-      - 积极贡献 Arch Linux RISC-V 软件包支持项目，提交 PR 189 个，努力提升 RISC-V 平台软件生态。
+      - 积极贡献 Arch Linux RISC-V 软件包支持项目，提交 PR 189 个，在 RISC-V 平台软件生态上做出大量贡献。
       - 独立负责 Arch Linux RISC-V 测试与验证，巩固并扩展其基础设施架构，搭建自动化构建测试环境，提升系统稳定性。
       - 积极推动 RISC-V 平台相关修改提交上游，与社区保持密切沟通，为 RISC-V 生态的广泛支持做出重要贡献。
       ],
@@ -139,7 +139,7 @@
       ], zh: [- 开发工具：主要使用 Neovim 在 Linux 环境开发，能适应任何常见编辑器/操作系统，有使用 #tools.join("、") 等团队协作工具的经验。])
     }
     let progLang = {
-      let very = "Rust Scala Ruby Lua TypeScript Nix"
+      let very = text(weight: "bold", "Rust Scala Ruby Lua TypeScript Nix")
       let somehow = "OCaml Haskell Zig C++"
       translate(en: [
         - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
@@ -149,27 +149,37 @@
     }
     let nvimDev = {
       let nvim = link("https://github.com/Avimitin/nvim")[Neovim]
+      let lazygit = link("https://github.com/kdheepak/lazygit.nvim")[lazygit.nvim]
       translate(en: [
         - Experience #nvim user, have full experience on Neovim plugin development and development environment deployment.
       ], zh: [
-        - 熟练的 #nvim 用户，给 Neovim 社区贡献过大量插件。
+        - 熟练的 #nvim 用户，拥有一个约 270 stars 的配置项目，给如 #lazygit 等千星 neovim 插件做过贡献，能够快速为团队定制一份好用的编辑器开发环境。
       ])
     }
     let linuxDev = translate(
       en: [- Linux development: experienced Linux distro user and developer, Know how Linux distro works and know what is the best practice for maintaining Linux infrastructure.],
-      zh: [- Linux 开发：非常熟悉发行版的工作机制，熟知在发行版上各种工作流的最佳实践，能够独立且熟练的寻找，测试并解决发行版工作中遇到的问题。]
+      zh: [- Linux 开发：非常熟悉发行版的工作机制，熟知在发行版上各种工作流的最佳实践，能够独立且熟练的寻找，测试并解决操作系统运行时遇到的问题。日常利用 NixOS Module 和 systemd 维护
+             基于 NFS 和 netboot 的规模中等的计算集群。在日常实践中也能够熟练使用 docker 部署服务。]
     )
-    let rustDev = translate(
-      en: [- Rust developement: familiar with Rust development, know some implementation detailed like the Async Coroutine, Higher Kinded Types],
-      zh: [- Rust 开发：熟悉 Rust 社区，常用 Rust 开发。理解并实践过一些实现细节，比如 Async Coroutine，Higher Kinded Types]
-    )
-    let nixDev = translate(
-      en: [- Nix developement: experienced with Nix packaging and reproducible build. Famililar with Nixpkgs library and packages. Daily driven project with Nix flakes],
-      zh: [- Nix 开发：在使用 Nix 打包和 reproducible build 上有丰富的经历，非常熟悉 Nixpkgs 的状态，库的实现和软件包的打包方式。日常使用 nix flake 来做开发环境]
-    )
+    let rustDev = {
+      let deepl = link("https://github.com/avimitin/deepl-rs")[deepl-rs]
+      translate(
+        en: [- Rust developement: familiar with Rust development, know some implementation detailed like the Async Coroutine, Higher Kinded Types],
+        zh: [- Rust 开发：熟悉 Rust 社区，日常使用 Rust 开发程序。熟知 Rust 实现上的细节，比如 Async Coroutine，Higher Kinded Types，在我的个人项目 #deepl 中都有所展现。]
+      )
+    }
+    let nixDev = {
+      let riscv-vector-tests = link("https://github.com/chipsalliance/riscv-vector-tests")[chipsalliance/riscv-vector-tests]
+      let t1 = link("https://github.com/chipsalliance/t1")[chipsalliance/t1]
+      translate(
+        en: [- Nix developement: experienced with Nix packaging and reproducible build. Famililar with Nixpkgs library and packages. Daily driven project with Nix flakes],
+        zh: [- Nix 开发：在使用 Nix 打包和 reproducible build 上有丰富的经历，非常熟悉 Nixpkgs 的状态，库的实现和软件包的打包方式。使用 Nix Flake 为 #riscv-vector-tests, #t1 等项目
+               维护过大型的如 LLVM，libc 等依赖。能够快速理解项目需求并迅速搭建需要的编译和调试运行环境。]
+      )
+    }
     let frontendDev = translate(
       en: [- React Development: familiar with how to start and implement a typical CSR or SSR frontend project, with React and Rust as the tech stack.],
-      zh: [- 前端开发：熟悉传统 SSR 和现代 CSR 的前端开发，熟悉 React 和 vite 技术栈]
+      zh: [- 前端开发：使用 React 和 Vite 等技术栈，开发过两到三个传统 SSR 和现代 CSR 的前端应用。使用 Diesel 等 ORM 开发过后端项目。]
     )
     progLang
     nvimDev

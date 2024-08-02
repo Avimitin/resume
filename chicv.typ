@@ -76,8 +76,10 @@
   )
   set list(indent: 0pt)
   set text(
-    size: 9pt,
-    font: the-font
+    size: 10pt,
+    font: the-font,
+    top-edge: 0.7em,
+    bottom-edge: -0.3em
   )
 
   show link: it => underline(offset: 2pt, it)
