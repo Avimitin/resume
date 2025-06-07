@@ -83,7 +83,7 @@
   }
 
   let xing = {
-    let xing-date = [#translate-date(05, 2023) -- #current]
+    let xing-date = [#translate-date(05, 2023) -- #translate-date(12, 2024)]
     translate(
       en: cventry(
         tl: [*Wafer Compiler*, Remote],
@@ -106,17 +106,64 @@
     )
   }
 
+  let hniic = {
+    let hniic-date = [#translate-date(01, 2025) -- #current]
+    translate(
+      en: cventry(
+        tl: [*Chip Design and Simulation*, Remote],
+        tr: hniic-date,
+        bl: [_HNIIC_, Hardware Enginner],
+      )[#noSimple(
+        // simple: [- Leading a team to explore modern techniques in type theory implementation.]
+      )[
+        - Developed and maintained a formal RISC-V ISA model by creating a code
+          generation framework in Sail and authoring key specifications.
+        - Engineered a comprehensive verification environment by implementing a
+          Rust-based simulation framework for co-simulation and a differential
+          testing framework to ensure model accuracy against a golden
+          reference.
+      ]],
+      zh: cventry(
+        tl: [*芯片设计与仿真*，远程],
+        tr: hniic-date,
+        bl: [_河南省科学院集成电路研究所_，初级硬件工程师],
+      )[
+      - 使用形式化定义设计与实现 RISC-V 硬件设计
+      - 使用 Rust 与 Sail 模型交互，实现仿真模拟器功能和验证。
+      ],
+    )
+  }
+
   let chipsalliance = {
     translate(
       en: cventry(
         tl: [*chipsalliance/t1*, RISC-V Vector implementation],
         tr: githublink("chipsalliance/t1"),
       )[
-      - CI/CD Infrastructure Management: Led development and maintenance of the CI/CD infrastructure for Project T1, ensuring seamless service deployment, server configuration, and ongoing system optimization.
-      - Simulation Test Automation: Spearheaded the creation of a simulation test automation framework for Project T1, driving daily regression testing and backend verification to ensure the RTL reliability.
-      - Performance Analysis Framework: Engineered the probe-based TestBench module for Project T1, drafting the performance analysis and inspection framework to identify bottlenecks and optimize compiler efficiency.
-      - Rocket Core Development: Engineered the rocket core DPI and Verilator emulator, establishing foundational support for integrating Project T1 with the Rocket Chip.
-      - Compiler Infrastructure: Led the design and implementation of basic system library for Project T1, enabling the execution of vectorized workloads and expanding the T1 emulator capabilities.
+      - CI/CD Infrastructure Management: Led development and maintenance of the
+        CI/CD infrastructure for Project T1, ensuring seamless service
+        deployment, server configuration, and ongoing system optimization.
+      - Simulation Test Automation: Spearheaded the creation of a simulation
+        test automation framework for Project T1, driving daily regression
+        testing and backend verification to ensure the RTL reliability.
+      - Performance Analysis Framework: Engineered the probe-based TestBench
+        module for Project T1, drafting the performance analysis and inspection
+        framework to identify bottlenecks and optimize compiler efficiency.
+      - Rocket Core Development: Engineered the rocket core DPI and Verilator
+        emulator, establishing foundational support for integrating Project T1
+        with the Rocket Chip.
+      - Compiler Infrastructure: Led the design and implementation of basic
+        system library for Project T1, enabling the execution of vectorized
+        workloads and expanding the T1 emulator capabilities.
+      - Authored and maintained RISC-V ISA specifications by developing a code
+        generation framework that translated opcodes into a formal hardware
+        model with the Sail language.
+      - Engineered a simulator framework in Rust to enable seamless interaction and
+        co-simulation between software testbenches and the Sail RISC-V hardware
+        model.
+      - Implemented a differential testing framework to validate hardware model
+        correctness by comparing processor states against a golden reference
+        model (Spike), significantly enhancing verification accuracy.
       ],
       zh: cventry(
         tl: [*chipsalliance/t1*，RISC-V 向量 IP],
@@ -127,24 +174,6 @@
       - 性能分析框架： 为 T1 项目开发了早期基于 Probe 的 TestBench 模块，提供的性能分析和检查框架，用于帮助编译器团队识别瓶颈并优化代码。
       - rocket-chip 开发： 开发了 rocket-chip DPI 和 verilator 仿真器，为 T1 项目与 Rocket Chip 生态系统的集成开发了基础实现。
       - 测试环境开发：开发并引入如 newlibc 等库进入 T1 项目，支持更多向量化测例的运行。
-      ],
-    )
-  }
-
-  let rvdecoderdb = {
-    translate(
-      en: cventry(
-        tl: [*chipsalliance/rvdecoderdb*, Describe RISC-V with Sail],
-        tr: githublink("chipsalliance/t1"),
-      )[
-      - Hardware Architecture: Utilizing RISC-V opcodes to do code-generation for defining RISC-V ISA specification in #githublink("rems-project/sail").
-      - Simulation: Design and maintaining a stable ABI for using Rust programming language to interact with Sail RISC-V model.
-      - Diff test: Implement a hardware states diff test mechanism to ensure RISC-V model correctness.
-      ],
-      zh: cventry(
-        tl: [*chipsalliance/t1*，RISC-V 向量 IP],
-        tr: githublink("chipsalliance/t1"),
-      )[
       - 体系结构：使用 RISC-V opcodes 做代码生成以轻松用 #githublink("rems-project/sail") 实现 RISC—V 体系结构描述。
       - 仿真模拟器：自主设计和维护了一套 C-API 及 Rust 实现，将 RISC-V 体系结构描述实现成可执行的模拟器。
       - 对比测试：实现了一套用于对比体系结构状态的框架，保证体系结构描述的正确性。
@@ -221,10 +250,10 @@
   archrv
   buddy-mlir
   xing
+  hniic
 
   translate(en: [== Related Projects], zh: [== 项目经历])
   chipsalliance
-  rvdecoderdb
 
   translate(en: [== Skills], zh: [== 技能])
   skills
