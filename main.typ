@@ -131,6 +131,27 @@
     )
   }
 
+  let rvdecoderdb = {
+    translate(
+      en: cventry(
+        tl: [*chipsalliance/rvdecoderdb*, Describe RISC-V with Sail],
+        tr: githublink("chipsalliance/t1"),
+      )[
+      - Hardware Architecture: Utilizing RISC-V opcodes to do code-generation for defining RISC-V ISA specification in #githublink("rems-project/sail").
+      - Simulation: Design and maintaining a stable ABI for using Rust programming language to interact with Sail RISC-V model.
+      - Diff test: Implement a hardware states diff test mechanism to ensure RISC-V model correctness.
+      ],
+      zh: cventry(
+        tl: [*chipsalliance/t1*，RISC-V 向量 IP],
+        tr: githublink("chipsalliance/t1"),
+      )[
+      - 体系结构：使用 RISC-V opcodes 做代码生成以轻松用 #githublink("rems-project/sail") 实现 RISC—V 体系结构描述。
+      - 仿真模拟器：自主设计和维护了一套 C-API 及 Rust 实现，将 RISC-V 体系结构描述实现成可执行的模拟器。
+      - 对比测试：实现了一套用于对比体系结构状态的框架，保证体系结构描述的正确性。
+      ],
+    )
+  }
+
   let skills = {
     let devTools = {
       let tools = ("GitHub", "Gitee", "Slack", "GitLab")
@@ -203,6 +224,7 @@
 
   translate(en: [== Related Projects], zh: [== 项目经历])
   chipsalliance
+  rvdecoderdb
 
   translate(en: [== Skills], zh: [== 技能])
   skills
